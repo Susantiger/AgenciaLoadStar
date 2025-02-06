@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agencia TigerShark</title>
-  <!-- 引入 Google 字体 -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
   <style>
-    /* 渐变背景 */
+
     body {
       background: linear-gradient(135deg, #000428, #004e92);
       font-family: 'Poppins', sans-serif;
@@ -20,7 +19,7 @@
       min-height: 100vh;
       text-align: center;
     }
-    /* 玻璃质感容器 */
+
     .container {
       background: rgba(255, 255, 255, 0.1);
       border-radius: 20px;
@@ -32,7 +31,7 @@
       -webkit-backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 255, 255, 0.18);
     }
-    /* Logo：圆形、阴影效果 */
+
     .logo {
       width: 250px;
       height: 250px;
@@ -66,7 +65,7 @@
     li:hover {
       transform: scale(1.05);
     }
-    /* 按钮样式：渐变背景、圆角、动画效果 */
+ 
     .button {
       display: inline-block;
       margin: 15px 10px;
@@ -84,13 +83,13 @@
       background: linear-gradient(45deg, #dd2476, #ff512f);
       transform: scale(1.05);
     }
-    /* 按钮排列 */
+    
     .buttons {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
     }
-    /* 淡入向上动画 */
+    
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -98,7 +97,7 @@
     .animate {
       animation: fadeInUp 1s ease-out;
     }
-    /* 弹窗样式 */
+    
     .modal {
       position: fixed;
       top: 0;
@@ -151,7 +150,7 @@
 </head>
 <body>
   <div class="container animate">
-    <!-- 圆形 logo -->
+    
     <img src="tiger_shark LOGO.png" alt="Logo TigerShark" class="logo">
     <h1>Bienvenido a Agencia TigerShark</h1>
     <p>En TigerShark, ayudamos a los streamers a crecer y mejorar su rendimiento en TikTok Live. Ofrecemos asesoramiento, soporte técnico y recompensas para aquellos que cumplen sus objetivos.</p>
@@ -164,43 +163,43 @@
     </ul>
     <p>¡No esperes más y conviértete en parte de TigerShark hoy mismo!</p>
     <div class="buttons">
-      <!-- 第一个按钮：TikTok -->
+     
       <a href="https://www.tiktok.com/@susan.tigershark?_t=ZS-8tegbCUob5j&_r=1" class="button" target="_blank">Visita nuestro TikTok</a>
-      <!-- 第二个按钮：Solicitar enlace（居中显示） -->
+      
       <a href="https://www.tiktok.com/t/ZS6KKdesS/" class="button" target="_blank">Solicitar enlace</a>
-      <!-- 第三个按钮：WhatsApp，点击后弹出弹窗 -->
+      
       <div class="button" id="whatsappBtn">Contáctanos por WhatsApp</div>
     </div>
   </div>
   
-  <!-- 弹窗 -->
+  
   <div class="modal" id="modal">
     <div class="modal-content">
-      <!-- 显示固定内容，点击复制 -->
+      
       <p id="modalNumber">+86 17850507285</p>
-      <!-- 只有一个确定按钮 -->
+      
       <button class="modal-btn" id="confirmBtn">Confirmar</button>
     </div>
   </div>
 
   <script>
-    // 获取元素
+    
     const whatsappBtn = document.getElementById('whatsappBtn');
     const modal = document.getElementById('modal');
     const modalNumber = document.getElementById('modalNumber');
     const confirmBtn = document.getElementById('confirmBtn');
 
-    // 显示弹窗
+    
     whatsappBtn.addEventListener('click', () => {
       modal.classList.add('active');
     });
 
-    // 关闭弹窗
+    
     confirmBtn.addEventListener('click', () => {
       modal.classList.remove('active');
     });
 
-    // 点击文本复制到剪贴板，并提示复制成功
+    
     modalNumber.addEventListener('click', () => {
       const text = modalNumber.textContent;
       navigator.clipboard.writeText(text).then(() => {
