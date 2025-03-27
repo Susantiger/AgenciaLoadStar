@@ -47,6 +47,29 @@
       font-size: 1.1em;
       line-height: 1.6;
     }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      color: #000;
+    }
     .modal-content input {
       width: 100%;
       padding: 10px;
@@ -57,31 +80,76 @@
       background: none;
       color: #000;
     }
+    .modal-btn {
+      padding: 10px 20px;
+      background: #fdbb2d;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      cursor: pointer;
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+    .modal-btn:hover {
+      background: #e69400;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 30px;
+      font-size: 1.2em;
+      color: #fff;
+      background: #000;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .buttons a:hover {
+      background: #fdbb2d;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="loadstar_logo.png" alt="Logo LoadStar" class="logo">
+    <img src="loadstarlogo.jpg" alt="Logo LoadStar" class="logo">
     <h1>Bienvenido a Agencia LoadStar</h1>
     <p>En LoadStar, ayudamos a los streamers a crecer y mejorar su rendimiento en TikTok Live.</p>
+    
+    <div class="operation-info">
+      <p><strong>¿Cómo funcionamos?</strong></p>
+      <p>LoadStar trabaja directamente con los streamers para proporcionar un apoyo completo y personalizado, ofreciendo:</p>
+      <ul>
+        <li>Mayor visibilidad y crecimiento en la plataforma.</li>
+        <li>Asesoramiento experto sobre estrategias de contenido y uso de herramientas.</li>
+        <li>Soporte 24/7 para resolver cualquier duda o problema técnico.</li>
+        <li>Recompensas exclusivas por cumplir con metas y objetivos establecidos.</li>
+      </ul>
+      <p>Además, trabajamos de cerca con TikTok para brindarte las mejores oportunidades de crecimiento y reconocimiento en la comunidad.</p>
+    </div>
+
+    <div class="section-title">
+      <p>Beneficios de unirte a LoadStar</p>
+    </div>
     <ul>
-      <li>Mayor visibilidad y crecimiento</li>
-      <li>Asesoramiento personalizado</li>
-      <li>Soporte 24/7</li>
-      <li>Recompensas exclusivas</li>
+      <li>Acceso a un sistema de recompensas basado en rendimiento y metas alcanzadas.</li>
+      <li>Incremento en tus ingresos gracias a un crecimiento de audiencia sostenido.</li>
+      <li>Mejor posicionamiento en la plataforma mediante técnicas probadas de optimización.</li>
     </ul>
+
     <div class="buttons">
-      <a href="https://www.tiktok.com/@loadstar_latam" class="button" target="_blank">Visita nuestro TikTok</a>
-      <a href="https://www.tiktok.com/t/ZSjyLCJv8/" class="button" target="_blank">Solicitar enlace</a>
-      <a href="#" class="button" id="contactBtn">Contáctanos</a>
+      <a href="https://www.tiktok.com/@loadstar_latam" target="_blank">Visita nuestro TikTok</a>
+      <a href="https://www.tiktok.com/t/ZSjyLCJv8/" target="_blank">Solicitar enlace</a>
+      <a href="#" id="contactBtn">Contáctanos</a>
     </div>
   </div>
+
   <div class="modal" id="modal">
     <div class="modal-content">
       <input type="text" value="+852 46733816" id="contactNumber" readonly>
       <button class="modal-btn" id="confirmBtn">Confirmar</button>
     </div>
   </div>
+
   <script>
     document.getElementById('contactBtn').addEventListener('click', () => {
       document.getElementById('modal').classList.add('active');
