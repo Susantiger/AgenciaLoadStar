@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agencia TigerShark</title>
+  <title>Agencia LoadStar</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
   <style>
-
     body {
-      background: linear-gradient(135deg, #000428, #004e92);
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
@@ -19,7 +18,6 @@
       min-height: 100vh;
       text-align: center;
     }
-
     .container {
       background: rgba(255, 255, 255, 0.1);
       border-radius: 20px;
@@ -28,13 +26,11 @@
       margin: 20px;
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 255, 255, 0.18);
     }
-
     .logo {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
@@ -49,7 +45,6 @@
     p, ul {
       font-size: 1.1em;
       line-height: 1.6;
-      margin: 0 0 20px;
     }
     ul {
       list-style-type: none;
@@ -65,7 +60,6 @@
     li:hover {
       transform: scale(1.05);
     }
- 
     .button {
       display: inline-block;
       margin: 15px 10px;
@@ -76,138 +70,34 @@
       font-size: 1.1em;
       border-radius: 50px;
       transition: background 0.4s, transform 0.3s;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
     }
     .button:hover {
       background: linear-gradient(45deg, #dd2476, #ff512f);
       transform: scale(1.05);
     }
-    
     .buttons {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
     }
-    
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate {
-      animation: fadeInUp 1s ease-out;
-    }
-    
-    .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.3s ease, visibility 0.3s;
-      z-index: 1000;
-    }
-    .modal.active {
-      visibility: visible;
-      opacity: 1;
-    }
-    .modal-content {
-      background: #fff;
-      color: #000;
-      padding: 30px 40px;
-      border-radius: 15px;
-      text-align: center;
-      max-width: 90%;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      position: relative;
-    }
-    .modal-content p {
-      font-size: 1.5em;
-      margin-bottom: 30px;
-      cursor: pointer;
-    }
-    .modal-btn {
-      padding: 12px 25px;
-      font-size: 1em;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background-color: #ff512f;
-      color: #fff;
-      transition: transform 0.3s, background 0.3s;
-    }
-    .modal-btn:hover {
-      transform: scale(1.05);
-      background: linear-gradient(45deg, #dd2476, #ff512f);
-    }
   </style>
 </head>
 <body>
-  <div class="container animate">
-    
-    <img src="tiger_shark LOGO.png" alt="Logo TigerShark" class="logo">
-    <h1>Bienvenido a Agencia TigerShark</h1>
-    <p>En TigerShark, ayudamos a los streamers a crecer y mejorar su rendimiento en TikTok Live. Ofrecemos asesoramiento, soporte técnico y recompensas para aquellos que cumplen sus objetivos.</p>
-    <p>Únete a nuestra comunidad y disfruta de beneficios como:</p>
+  <div class="container">
+    <img src="loadstar_logo.png" alt="Logo LoadStar" class="logo">
+    <h1>Bienvenido a Agencia LoadStar</h1>
+    <p>En LoadStar, ayudamos a los streamers a crecer y mejorar su rendimiento en TikTok Live.</p>
     <ul>
-      <li>Mejor visibilidad y crecimiento en TikTok</li>
-      <li>Asesoramiento y estrategias personalizadas</li>
-      <li>Soporte 24/7 para resolver cualquier problema</li>
-      <li>Recompensas y bonificaciones exclusivas</li>
+      <li>Mayor visibilidad y crecimiento</li>
+      <li>Asesoramiento personalizado</li>
+      <li>Soporte 24/7</li>
+      <li>Recompensas exclusivas</li>
     </ul>
-    <p>¡No esperes más y conviértete en parte de TigerShark hoy mismo!</p>
     <div class="buttons">
-     
-      <a href="https://www.tiktok.com/@susan.tigershark?_t=ZS-8tegbCUob5j&_r=1" class="button" target="_blank">Visita nuestro TikTok</a>
-      
-      <a href="https://www.tiktok.com/t/ZS6KKdesS/" class="button" target="_blank">Solicitar enlace</a>
-      
-      <div class="button" id="whatsappBtn">Contáctanos por WhatsApp</div>
+      <a href="#" class="button">Visita nuestro TikTok</a>
+      <a href="#" class="button">Solicitar enlace</a>
+      <a href="#" class="button">Contáctanos</a>
     </div>
   </div>
-  
-  
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      
-      <p id="modalNumber">+86 17850507285</p>
-      
-      <button class="modal-btn" id="confirmBtn">Confirmar</button>
-    </div>
-  </div>
-
-  <script>
-    
-    const whatsappBtn = document.getElementById('whatsappBtn');
-    const modal = document.getElementById('modal');
-    const modalNumber = document.getElementById('modalNumber');
-    const confirmBtn = document.getElementById('confirmBtn');
-
-    
-    whatsappBtn.addEventListener('click', () => {
-      modal.classList.add('active');
-    });
-
-    
-    confirmBtn.addEventListener('click', () => {
-      modal.classList.remove('active');
-    });
-
-    
-    modalNumber.addEventListener('click', () => {
-      const text = modalNumber.textContent;
-      navigator.clipboard.writeText(text).then(() => {
-        alert('Número copiado al portapapeles: ' + text);
-      }).catch(err => {
-        console.error('Error al copiar: ', err);
-      });
-    });
-  </script>
 </body>
 </html>
